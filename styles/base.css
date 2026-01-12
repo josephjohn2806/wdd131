@@ -1,42 +1,65 @@
-/* Structural Rules */
-header, main, footer {
+/* ===============================
+   Base Styles
+================================ */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   Structural Rules (REQUIRED)
+================================ */
+header {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
-/* Flexbox for Navigation */
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ===============================
+   Navigation (Flexbox Required)
+================================ */
 nav {
     display: flex;
-    background-color: #333;
     justify-content: space-around;
+    align-items: center;
+    background-color: #333;
     padding: 1rem;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: 700;
 }
 
+/* Hover effect REQUIRED */
 nav a:hover {
+    color: yellow;
     text-decoration: underline;
-    color: yellow; /* Audit looks for :hover usage */
 }
 
-/* CSS Grid for Main Content Sections */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
+/* ===============================
+   Card Sections
+================================ */
 .card {
-    border: 1px solid #ddd;
+    border: 1px solid #cccccc;
     padding: 1rem;
     background-color: #f9f9f9;
 }
-
