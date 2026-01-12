@@ -1,0 +1,65 @@
+/* ===============================
+   Base Styles
+================================ */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   Structural Rules (REQUIRED)
+================================ */
+header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ===============================
+   Navigation (Flexbox Required)
+================================ */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Hover effect REQUIRED */
+nav a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* ===============================
+   Card Sections
+================================ */
+.card {
+    border: 1px solid #cccccc;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
