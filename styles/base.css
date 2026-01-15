@@ -15,7 +15,9 @@ footer {
     margin: 0 auto;
     padding: 20px;
 }
-
+main {
+    display: block;
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
