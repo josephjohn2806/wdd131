@@ -8,6 +8,7 @@
 
     <meta name="description" content="A responsive temple album showcasing African LDS temples for the WDD 131 course project.">
     <meta name="author" content="Joseph John">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,7 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
     <div class="header-container">
         <h1>Temple Album</h1>
@@ -46,12 +48,13 @@
     </div>
 </header>
 
+<!-- ================= MAIN ================= -->
 <main>
     <section class="intro">
         <h2>Home</h2>
     </section>
 
-    <section class="temple-grid">
+    <section class="temple-grid" aria-label="Temple gallery">
 
         <figure>
             <img src="images/nairobi.jpg" alt="Nairobi Kenya Temple exterior" loading="lazy">
@@ -72,11 +75,29 @@
         </figure>
 
         <figure>
+            <img src="images/lubumbashi.jpg" alt="Lubumbashi DR Congo Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Lubumbashi DR Congo Temple</h3>
+                <p><strong>Dedicated:</strong> April 16, 2019</p>
+                <p><strong>Area:</strong> 10,700 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
             <img src="images/naijeria.jpg" alt="Abuja Nigeria Temple exterior" loading="lazy">
             <figcaption>
                 <h3>Abuja Nigeria Temple</h3>
                 <p><strong>Dedicated:</strong> November 19, 2023</p>
                 <p><strong>Area:</strong> 9,500 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/accra.jpg" alt="Accra Ghana Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Accra Ghana Temple</h3>
+                <p><strong>Dedicated:</strong> January 11, 2004</p>
+                <p><strong>Area:</strong> 17,000 sq ft</p>
             </figcaption>
         </figure>
 
@@ -89,9 +110,37 @@
             </figcaption>
         </figure>
 
+        <figure>
+            <img src="images/durban.jpg" alt="Durban South Africa Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Durban South Africa Temple</h3>
+                <p><strong>Dedicated:</strong> February 16, 2020</p>
+                <p><strong>Area:</strong> 19,860 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/cape-town.jpg" alt="Cape Town South Africa Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Cape Town South Africa Temple</h3>
+                <p><strong>Dedicated:</strong> April 7, 2024</p>
+                <p><strong>Area:</strong> 9,500 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/harare.jpg" alt="Harare Zimbabwe Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Harare Zimbabwe Temple</h3>
+                <p><strong>Dedicated:</strong> August 17, 2023</p>
+                <p><strong>Area:</strong> 17,000 sq ft</p>
+            </figcaption>
+        </figure>
+
     </section>
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>
     <p>&copy; <span id="currentyear"></span> | Temple Album | Joseph John</p>
     <p id="lastModified"></p>
