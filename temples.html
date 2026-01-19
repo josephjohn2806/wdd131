@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 | Temple Album</title>
+
+    <meta name="description" content="A responsive temple album showcasing African LDS temples for the WDD 131 course project.">
+    <meta name="author" content="Joseph John">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>Temple Album</h1>
+
+        <!-- Hamburger Menu -->
+        <button id="menu" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav aria-label="Main navigation">
+            <ul class="navigation show">
+                <li><a href="#" aria-current="page">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Home</h2>
+    </section>
+
+    <section class="temple-grid">
+
+        <figure>
+            <img src="images/nairobi.jpg" alt="Nairobi Kenya Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Nairobi Kenya Temple</h3>
+                <p><strong>Dedicated:</strong> May 18, 2024</p>
+                <p><strong>Area:</strong> 19,000 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/congo.jpg" alt="Kinshasa DR Congo Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Kinshasa DR Congo Temple</h3>
+                <p><strong>Dedicated:</strong> April 14, 2019</p>
+                <p><strong>Area:</strong> 12,000 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/naijeria.jpg" alt="Abuja Nigeria Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Abuja Nigeria Temple</h3>
+                <p><strong>Dedicated:</strong> November 19, 2023</p>
+                <p><strong>Area:</strong> 9,500 sq ft</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/southafrica.jpg" alt="Johannesburg South Africa Temple exterior" loading="lazy">
+            <figcaption>
+                <h3>Johannesburg South Africa Temple</h3>
+                <p><strong>Dedicated:</strong> August 24, 1985</p>
+                <p><strong>Area:</strong> 19,184 sq ft</p>
+            </figcaption>
+        </figure>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> | Temple Album | Joseph John</p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

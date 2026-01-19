@@ -1,0 +1,80 @@
+/* =========================================
+   temples-large.css
+   Large Screen Enhancements (WDD 131)
+   Applied at 900px and above
+========================================= */
+
+@media (min-width: 900px) {
+
+    /* ===== Header ===== */
+    .header-container {
+        max-width: 1200px;
+        padding: 1.5rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+        position: static;
+        width: auto;
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* Hide hamburger on large screens */
+    #menu {
+        display: none;
+    }
+
+    /* ===== Main Layout ===== */
+    main {
+        max-width: 1200px;
+        padding: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .intro p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* ===== Temple Grid ===== */
+    .temple-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    figure {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    figcaption h3 {
+        font-size: 1.1rem;
+    }
+
+    figcaption p {
+        font-size: 0.95rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        font-size: 0.95rem;
+    }
+}
