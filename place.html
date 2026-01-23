@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Country page about Tanzania">
+    <meta name="description" content="Explore Tanzania: Discover key country data, current weather conditions, and beautiful landscapes like Mount Kilimanjaro on this informational page.">
     <meta name="author" content="Joseph John">
     <title>Tanzania | Country Page</title>
 
@@ -19,8 +19,8 @@
     <main>
         <section class="hero">
             <picture>
-                <source srcset="images/mount-kilimanjaro.webp" media="(min-width: 800px)">
-                <img src="Images/mount-kilimanjaro.webp" alt="Mount Kilimanjaro in Tanzania">
+                <source srcset="Images/tanzania-large.webp" media="(min-width: 800px)">
+                <img src="Images/tanzania-small.webp" alt="Mount Kilimanjaro in Tanzania" loading="lazy">
             </picture>
         </section>
 
@@ -36,7 +36,11 @@
         </section>
 
         <section class="weather">
-            <h2>Weather ⛅</h2>
+            <h2>Weather 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="weather-icon">
+                    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m12.72-12.72l-1.41 1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+                </svg>
+            </h2>
             <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
             <p><strong>Wind Speed:</strong> <span id="wind">12</span> km/h</p>
             <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
@@ -44,8 +48,9 @@
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Joseph John | Tanzania</p>
+        <p>&copy; <span id="year"></span> Joseph John | Tanzania</p>
         <p>Last Modified: <span id="modified"></span></p>
     </footer>
 </body>
 </html>
+
