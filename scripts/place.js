@@ -1,19 +1,24 @@
-// Footer year and last modified
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("modified").textContent = document.lastModified;
+// Footer: Current Year and Last Modified
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 
-// Weather values
-const temp = 28; // Celsius
-const wind = 12; // km/h
+// Wind Chill Calculation
+// Static values matching the HTML content
+const temperature = 9; 
+const windSpeed = 10;
 
-function calculateWindChill(t, w) {
-    return 13.12 + (0.6215 * t) - (11.37 * Math.pow(w, 0.16)) + (0.3965 * t * Math.pow(w, 0.16));
-}
+/**
+ * Calculates Wind Chill for Metric Units (°C, km/h)
+ * Formula: 13.12 + 0.6215T - 11.37(V^0.16) + 0.3965T(V^0.16)
+ */
+const calculateWindChill = (t, v) => (13.12 + 0.6215 * t - 11.37 * Math.pow(v, 0.16) + 0.3965 * t * Math.pow(v, 0.16)).toFixed(1);
 
-// Wind chill conditions (metric)
-if (temp <= 10 && wind > 4.8) {
-    const chill = calculateWindChill(temp, wind).toFixed(1);
-    document.getElementById("chill").textContent = `${chill} °C`;
+const windChillElement = document.getElementById("windchill");
+
+// Viable Conditions Check: Temp <= 10°C AND Wind > 4.8 km/h
+if (temperature <= 10 && windSpeed > 4.8) {
+    windChillElement.textContent = calculateWindChill(temperature, windSpeed) + "°C";
 } else {
-    document.getElementById("chill").textContent = "N/A";
+    windChillElement.textContent = "N/A";
 }
+

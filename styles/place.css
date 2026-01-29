@@ -1,98 +1,53 @@
 :root {
-    --primary-color: #1b5e20;
-    --secondary-color: #fbc02d;
-    --background-color: #f5f5f5;
-    --text-color: #222;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary: #1EB53A; /* Green */
+    --secondary: #00A3DD; /* Blue */
+    --accent: #FCD116; 
+    --white: #ffffff;
+    --black: #000000;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
+header, footer {
+    background-color: var(--primary);
+    color: var(--white);
     padding: 1.5rem;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 1rem;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    display: block;
-}
-
-section {
-    background: white;
-    padding: 1rem;
-    margin-top: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.weather-icon {
-    stroke: var(--secondary-color);
-}
-
-ul {
-    list-style: none;
-}
-
-ul li {
-    margin: 0.4rem 0;
-}
-
-.weather {
     text-align: center;
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
+    background-color: var(--secondary);
+    border-top: 4px solid var(--accent);
     margin-top: 2rem;
 }
 
-/* Added pseudo-element to satisfy the CSS Audit requirement */
-footer p::after {
-    content: " 🌍";
+.hero { position: relative; }
+.hero img { width: 100%; height: auto; display: block; }
+.hero-label {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(0,0,0,0.6); color: white; padding: 5px 15px;
 }
 
-/* Responsive */
-@media (min-width: 700px) {
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1rem;
-    }
+section { background: var(--white); margin: 1rem; padding: 1rem; border: 1px solid #ddd; }
 
-    .hero {
-        grid-column: 1 / -1;
+/* Wide View Layout */
+@media (min-width: 800px) {
+    main { position: relative; max-width: 1200px; margin: 0 auto; }
+    
+    .data, .weather {
+        position: absolute; width: 250px; background: rgba(255, 255, 255, 0.9);
+    }
+    .data { top: 30px; left: 30px; }
+    .weather { top: 30px; right: 30px; }
+
+    /* Requirement: Pseudo element for weather icon after heading */
+    .weather-heading::after {
+        content: " ⛅";
+        font-size: 1.5rem;
     }
 }
 
