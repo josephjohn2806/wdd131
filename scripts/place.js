@@ -1,24 +1,25 @@
-// Footer: Current Year and Last Modified
+// Footer: Current Year and Last Modification Date
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Wind Chill Calculation
-// Static values matching the HTML content
-const temperature = 9; 
-const windSpeed = 10;
+// Static values for calculation as per assignment instructions
+const temp = 9; // Celsius
+const wind = 10; // km/h
 
 /**
- * Calculates Wind Chill for Metric Units (°C, km/h)
+ * Requirement: Returns the result of the windchill calculation in one line.
  * Formula: 13.12 + 0.6215T - 11.37(V^0.16) + 0.3965T(V^0.16)
  */
-const calculateWindChill = (t, v) => (13.12 + 0.6215 * t - 11.37 * Math.pow(v, 0.16) + 0.3965 * t * Math.pow(v, 0.16)).toFixed(1);
+function calculateWindChill(t, v) {
+    return (13.12 + 0.6215 * t - 11.37 * Math.pow(v, 0.16) + 0.3965 * t * Math.pow(v, 0.16)).toFixed(1);
+}
 
-const windChillElement = document.getElementById("windchill");
+const windChillDisplay = document.getElementById("windchill");
 
-// Viable Conditions Check: Temp <= 10°C AND Wind > 4.8 km/h
-if (temperature <= 10 && windSpeed > 4.8) {
-    windChillElement.textContent = calculateWindChill(temperature, windSpeed) + "°C";
+// Requirement: Only call if Metric conditions (Temp <= 10 and Wind > 4.8) are met
+if (temp <= 10 && wind > 4.8) {
+    windChillDisplay.textContent = calculateWindChill(temp, wind) + "°C";
 } else {
-    windChillElement.textContent = "N/A";
+    windChillDisplay.textContent = "N/A";
 }
 
