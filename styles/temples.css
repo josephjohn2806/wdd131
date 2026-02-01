@@ -135,7 +135,7 @@ footer {
 
     .navigation {
         flex-direction: column;
-        align-items: center;
+        alignitems: center;
         display: none;
         padding: 1rem 0;
         display: flex;

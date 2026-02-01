@@ -1,0 +1,53 @@
+/* ===== Temple Grid & Cards ===== */
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.temple-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners match card radius */
+    display: flex;
+    flex-direction: column;
+}
+
+.temple-card h3 {
+    background-color: #2c3e50;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.temple-card p {
+    padding: 0 15px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.temple-card p span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.temple-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crops image to fill area without stretching */
+    border-top: 1px solid #ddd;
+    margin-top: auto; /* Pushes image to the bottom of the card */
+}
+
+/* ===== Active State for Navigation ===== */
+.navigation a:active, 
+.navigation a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffd700; /* Gold color for the active filter */
+}
+
