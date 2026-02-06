@@ -8,6 +8,10 @@
     --body-font: 'Open Sans', sans-serif;
 }
 
+ .hero-box {
+height: 100px;
+ }
+
 body {
     background-color: #ffffff;
     color: var(--text-dark);
