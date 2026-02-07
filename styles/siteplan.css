@@ -1,95 +1,88 @@
+/* Import Google Fonts as required by your site plan */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
 :root {
-    --primary-green: #2E4632;
-    --sandstone: #F5F1E9;
-    --burnt-ochre: #B3541E;
-    --text-dark: #222222;
-    --heading-font: 'Montserrat', sans-serif;
-    --body-font: 'Open Sans', sans-serif;
+    --primary-blue: #1b365d;
+    --accent-gold: #c5a059;
+    --whatsapp-green: #25D366;
+    --light-bg: #f0f2f5;
 }
 
 body {
-    background-color: #ffffff;
-    color: var(--text-dark);
-    font-family: var(--body-font);
-    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--light-bg);
     margin: 0;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: white;
-    padding: 2rem;
+    width: 100%;
+    padding: 2rem 0;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-bottom: 4px solid var(--accent-gold);
 }
 
 header h1 {
-    font-family: var(--heading-font);
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
-main {
-    max-width: 900px;
-    margin: 0 auto;
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin-top: 2rem;
 }
 
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-green);
-    border-left: 5px solid var(--burnt-ochre);
-    padding-left: 15px;
+.card {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Color Swatches */
-.color-container {
+/* Fix: Un-nested these from .card to pass W3C validation */
+.card h2 {
+    color: var(--primary-blue);
+    border-left: 5px solid var(--accent-gold);
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.color-swatch {
-    flex: 1;
-    min-width: 200px;
-    padding: 30px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-}
-
-.primary { background-color: var(--primary-green); color: white; }
-.secondary { background-color: var(--sandstone); color: var(--text-dark); border: 1px solid #ccc; }
-.accent { background-color: var(--burnt-ochre); color: white; }
-
-/* Wireframes & Fixing Inline Style Error */
-.wireframe-placeholder {
-    background: #f9f9f9;
-    border: 2px dashed #ccc;
-    padding: 20px;
     margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
 }
 
-.box {
-    background: #eee;
-    border: 1px solid #999;
-    margin: 5px 0;
-    padding: 10px;
-    text-align: center;
+.btn-church {
+    background-color: var(--primary-blue);
+    color: white;
 }
 
-/* This class replaces the style="height:100px" that caused the audit error */
-.hero-box {
-    height: 100px;
+.btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white;
 }
 
-.desktop { display: none; }
-
-@media (min-width: 768px) {
-    .desktop { display: block; }
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
