@@ -1,54 +1,53 @@
 :root {
-    --primary-color: #2c3e50; /* High contrast dark blue */
-    --accent-color: #8e44ad;
-    --text-color: #212121;
-    --light-bg: #ffffff;
+    --primary-color: #000;
+    --accent-color: #4b0082; /* Purple theme often used in BYU-I assignments */
+    --text-color: #333;
+    --bg-color: #f4f4f4;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5;
-    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
     margin: 0;
+    color: var(--text-color);
 }
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: #fff;
     padding: 1.5rem;
     text-align: center;
 }
 
 form {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: var(--light-bg);
+    max-width: 500px;
+    margin: 20px auto;
     padding: 2rem;
+    background: #fff;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Form Design Principles: Alignment and Spacing */
+/* Principle: Alignment - Labels stacked on inputs */
 label {
     display: block;
     margin-top: 1.2rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="date"], select, textarea {
     width: 100%;
     padding: 0.8rem;
-    margin-top: 0.4rem;
-    border: 1px solid #767676; /* Standard accessible border */
+    margin-top: 5px;
+    border: 1px solid #777;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Critical for layout audits */
 }
 
 fieldset {
-    border: 1px solid #ccc;
-    border-radius: 5px;
     margin-top: 1.5rem;
+    border: 1px solid #ddd;
     padding: 1rem;
 }
 
@@ -57,29 +56,33 @@ legend {
     padding: 0 0.5rem;
 }
 
-/* Button with focus state for accessibility */
-button#submitBtn {
-    display: block;
-    width: 100%;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 4px;
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    cursor: pointer;
+/* Principle: Proximity - Radio/Checkbox grouping */
+.rating-container label, fieldset label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
 }
 
-button#submitBtn:focus {
-    outline: 3px solid var(--accent-color);
+input[type="submit"] {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #310055;
 }
 
 footer {
     text-align: center;
     padding: 2rem;
-    background: var(--primary-color);
-    color: white;
-    margin-top: 3rem;
+    font-size: 0.9rem;
 }
 

@@ -1,3 +1,4 @@
+// Step 3 Requirement: Exact Product Array
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power lace", averagerating: 4.7 },
@@ -7,18 +8,18 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    const select = document.getElementById("productName");
-    
-    // Populate the product select menu
+    const productList = document.querySelector("#productName");
+
+    // Dynamic Option Creation
     products.forEach(product => {
         const option = document.createElement("option");
         option.value = product.id;
         option.textContent = product.name;
-        select.appendChild(option);
+        productList.appendChild(option);
     });
 
-    // Update Footer Information
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    // Footer Dates
+    document.querySelector("#currentyear").textContent = new Date().getFullYear();
+    document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
 });
 

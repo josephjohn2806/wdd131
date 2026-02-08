@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product Review Form for WDD 131 assignment.">
-    <title>Product Review Form - WDD 131</title>
+    <title>Product Review Form | WDD 131</title>
+    <meta name="description" content="A professional product review form for the WDD 131 course.">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
@@ -16,17 +16,17 @@
         <form method="get" action="review.html">
             <label for="productName">Product Name</label>
             <select id="productName" name="productName" required>
-                <option value="" disabled selected>Choose a Product ...</option>
+                <option value="" disabled selected>Select a Product ...</option>
             </select>
 
             <fieldset>
                 <legend>Overall Rating</legend>
                 <div class="rating-container">
-                    <label><input type="radio" name="rating" value="1" required> <span>☆</span></label>
-                    <label><input type="radio" name="rating" value="2"> <span>☆☆</span></label>
-                    <label><input type="radio" name="rating" value="3"> <span>☆☆☆</span></label>
-                    <label><input type="radio" name="rating" value="4"> <span>☆☆☆☆</span></label>
-                    <label><input type="radio" name="rating" value="5"> <span>☆☆☆☆☆</span></label>
+                    <label><input type="radio" name="rating" value="1" required> 1</label>
+                    <label><input type="radio" name="rating" value="2"> 2</label>
+                    <label><input type="radio" name="rating" value="3"> 3</label>
+                    <label><input type="radio" name="rating" value="4"> 4</label>
+                    <label><input type="radio" name="rating" value="5"> 5</label>
                 </div>
             </fieldset>
 
@@ -47,7 +47,7 @@
             <label for="userName">Your Name (Optional)</label>
             <input type="text" id="userName" name="userName">
 
-            <button type="submit" id="submitBtn">Post Review</button>
+            <input type="submit" value="Post Review">
         </form>
     </main>
     <footer>
