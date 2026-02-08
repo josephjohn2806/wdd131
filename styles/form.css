@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #2c3e50; /* High contrast dark blue */
+    --accent-color: #8e44ad;
+    --text-color: #212121;
+    --light-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: var(--text-color);
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Form Design Principles: Alignment and Spacing */
+label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: 1px solid #767676; /* Standard accessible border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Button with focus state for accessibility */
+button#submitBtn {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button#submitBtn:focus {
+    outline: 3px solid var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 3rem;
+}
+
