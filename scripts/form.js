@@ -15,3 +15,16 @@ if (window.location.pathname.includes("review.html")) {
     messageContainer.appendChild(countDisplay);
 }
 
+//external Js
+document.getElementByld("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+if (window.location.pathname.includes("review.html")) {
+    let reviewCount = localStorage.getItem("reviewCount") || 0;
+    reviewCount++;
+    localStorage.setItem("reviewCount", reviewCount);
+    const messageContainer = document.querySelector(".confirmation-message");
+    const countDisplay = document.createElement("p");
+    countDisplay.textContent = `Total reviews submitted: ${reviewCount}`;
+    messageContainer.appendChild(countDisplay);
+}
+
