@@ -1,77 +1,56 @@
-/**
- * Musembi Earthways Safaris - Main Script
- * Focus: Hamburger Menu, LocalStorage, and Dynamic UI
- */
+/* JavaScript for Musembi Earthways Safaris */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. SELECT ELEMENTS
-    const menuToggle = document.querySelector("#menu-toggle");
+    // --- 1. Hamburger Menu Logic (DOM Interaction & Event Listening) ---
+    const menuBtn = document.querySelector("#menu-toggle");
     const navMenu = document.querySelector("#nav-menu");
-    const visitDisplay = document.querySelector("#visit-message");
-    const contactForm = document.querySelector("#contactForm");
 
-    // 2. HAMBURGER MENU LOGIC
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            const isOpen = navMenu.classList.toggle("open");
-            
-            // Toggle ARIA attribute for accessibility
-            menuToggle.setAttribute("aria-expanded", isOpen);
-            
-            // Animate Hamburger to X (CSS handles the rotation, JS triggers the state)
-            menuToggle.classList.toggle("active");
-        });
-
-        // Close menu when clicking outside (Professional UX)
-        document.addEventListener("click", (e) => {
-            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove("open");
-                menuToggle.classList.remove("active");
-            }
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener("click", () => {
+            const isOpened = navMenu.classList.toggle("open");
+            menuBtn.classList.toggle("active");
+            // Conditional branching for Accessibility
+            menuBtn.setAttribute("aria-expanded", isOpened ? "true" : "false");
         });
     }
 
-    // 3. VISIT TRACKER (LocalStorage & Template Literals)
-    if (visitDisplay) {
-        // Get the current count from storage, default to 0 if null
-        let visitCount = Number(window.localStorage.getItem("musembi-visits")) || 0;
+    // --- 2. LocalStorage Visit Tracker (Objects & Conditional Branching) ---
+    const visitMsg = document.querySelector("#visit-message");
+    if (visitMsg) {
+        // Use localStorage to keep track of user sessions
+        let visits = Number(window.localStorage.getItem("safari-visits")) || 0;
 
-        if (visitCount === 0) {
-            visitDisplay.innerHTML = `Welcome! 🌍 This is your first time exploring <strong>Musembi Earthways Safaris</strong>.`;
+        // Conditional branching to change message based on visit count
+        if (visits === 0) {
+            // Exclusively use Template Literals for output strings
+            visitMsg.innerHTML = `Welcome to the wild! This is your <strong>first visit</strong>. Explore our eco-reports!`;
         } else {
-            visitDisplay.innerHTML = `Welcome back! You have visited our wild spaces <strong>${visitCount}</strong> times.`;
+            visitMsg.innerHTML = `Welcome back, traveler! You have visited us <strong>${visits}</strong> times. Ready for your next adventure?`;
         }
-
-        // Increment and save back to localStorage
-        visitCount++;
-        localStorage.setItem("musembi-visits", visitCount);
+        
+        localStorage.setItem("safari-visits", visits + 1);
     }
 
-    // 4. CONTACT FORM HANDLING
-    if (contactForm) {
-        contactForm.addEventListener("submit", (event) => {
-            event.preventDefault();
+    // --- 3. Dynamic Tour Generation (Arrays, Objects, & Methods) ---
+    const tours = [
+        { name: "Eco-Impact Solo", duration: "3 Days", price: "$1,200" },
+        { name: "Family Cultural", duration: "5 Days", price: "$2,500" }
+    ];
 
-            // Extract values for a personalized message
-            const firstName = document.querySelector("#name")?.value || "Adventurer";
-            const safariType = document.querySelector("#safari-type")?.value || "General Safari";
-
-            // Professional feedback using Template Literals
-            const successMessage = `Asante, ${firstName}! Your inquiry for the ${safariType} has been received. Our conservation expert will reach out within 24 hours.`;
-            
-            alert(successMessage);
-            contactForm.reset();
+    const tourContainer = document.querySelector("#tour-grid");
+    if (tourContainer) {
+        // Using array methods to build dynamic content
+        tours.forEach(tour => {
+            const card = document.createElement("div");
+            card.className = "tour-card";
+            // Template literals for building strings
+            card.innerHTML = `
+                <h3>${tour.name}</h3>
+                <p>Duration: ${tour.duration}</p>
+                <p>Starting at ${tour.price}</p>
+            `;
+            tourContainer.appendChild(card);
         });
     }
-
-    // 5. ACTIVE LINK HIGHLIGHTER
-    const navLinks = document.querySelectorAll(".nav-menu a");
-    const currentPath = window.location.pathname;
-
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath.split("/").pop()) {
-            link.classList.add("active");
-        }
-    });
 });
 

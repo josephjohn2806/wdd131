@@ -1,70 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Joseph Samwel John">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course landing page for Joseph John.">
-    <title>WDD 131: Dynamic Web Fundamentals - Joseph John</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles/base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/getdates.js" defer></script>
+    <title>Home | Musembi Earthways Safaris</title>
+    <meta name="description" content="Eco-conscious wildlife safaris and conservation-focused experiences in Kenya.">
+    <link rel="stylesheet" href="styles/musembi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-        <h1><span id="course-title">WDD 131: Dynamic Web Fundamentals</span></h1>
-        <nav>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
-            <a href="final-project.html">Final Project</a>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-placeholder"></div> <span>MUSEMBI <span>EARTHWAYS</span></span>
+            </a>
+            <button id="menu-toggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero-name">
-            <h2>Joseph Samwel John</h2>
-        </div>
-
-        <div class="grid-container">
-            <section class="card">
-                <div class="card-header">About Me</div>
-                <div class="card-content">
-                    <p>I am from Arusha, Tanzania. I am passionate about technology and how it can be used to solve community problems.</p>
-                    <div class="location-info">
-                        <h3>Joseph John</h3>
-                        <img src="../Images/josephjohn.jpg" alt="joseph john" width="200">
-                        <h4>Tanzania</h4>
-                        <img src="data:image/jpeg;base64,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" alt="tanzania flag" width="100">
-                        <p>Tanzania is a country in East Africa known for its vast wilderness areas, including the Serengeti and Kilimanjaro.</p>
-                    </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Connect with the Wild</h1>
+                <p>Sustainable wildlife journeys designed for the eco-conscious traveler.</p>
+                <div class="booking-widget">
+                    <input type="text" placeholder="Destination">
+                    <input type="date">
+                    <button class="btn-accent">Check Availability</button>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="card">
-                <div class="card-header">Web Dev Resources</div>
-                <div class="card-content">
-                    <ul class="resources">
-                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
-                        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
-                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
-                        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-                    </ul>
+        <section class="content-area container">
+            <h2>Featured Itinerary: Heritage Heartbeat</h2>
+            <p class="subtitle">A 5-Day Cultural & Wildlife Experience for Families</p>
+            <div class="itinerary-grid">
+                <div class="day-card">
+                    <h3>Day 1-2: Conservation Roots</h3>
+                    <p>Visit elephant rescue centers and enjoy walking safaris in the Rift Valley.</p>
                 </div>
-            </section>
-        </div>
+                <div class="day-card">
+                    <h3>Day 3: Maasai Culture</h3>
+                    <p>Immersive village stay learning traditional heritage and sustainable living.</p>
+                </div>
+                <div class="day-card">
+                    <h3>Day 4-5: The Great Mara</h3>
+                    <p>Wildlife tracking in the Maasai Mara with detailed eco-impact reporting.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> | Joseph Samwel John | Tanzania</p>
-        <p id="lastModified"></p>
+        <p id="visit-message"></p>
+        <p>&copy; 2026 Musembi Earthways Safaris | <a href="references.html">References</a></p>
     </footer>
-
+    <script src="scripts/musembi.js"></script>
 </body>
 </html>
 
