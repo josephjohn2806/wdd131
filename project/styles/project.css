@@ -73,8 +73,8 @@ header {
 /* --- 4. HOME PAGE HERO --- */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.4) rgba(0,0,0,0.4)), 
-                url('https://images.unsplash.com/photo-1516422217105-070b30436b44?q=80&w=2000');
+    background: linear-gradient(rgba(0,0,0,0.4) ,rgba(0,0,0,0.4)),
+        url('../images/sunset.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -222,5 +222,12 @@ header {
     transition: 0.3s ease;
 }
 
+.bar{
 
+
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px 0;
+}
 
