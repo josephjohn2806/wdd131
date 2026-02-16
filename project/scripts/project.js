@@ -1,13 +1,11 @@
 /* --- 1. Mobile Menu Toggle  --- */
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const menu = document.querySelector('#menu');
+const navLinks = document.querySelector('#nav-links');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-        menuToggle.classList.toggle('active');
-    });
-}
+menu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 
 /* --- 2. Visit Tracker  --- */
 const visitDisplay = document.querySelector('#visit-tracker');
@@ -33,6 +31,4 @@ const footerYear = document.querySelector('#currentyear');
 if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
 }
-
-
 
