@@ -1,0 +1,226 @@
+/* --- 1. THEME VARIABLES --- */
+:root {
+    --primary-color: #2E4632; /* Dark Forest Green */
+    --accent-color: #B3541E; /* Earthy Orange */
+    --bg-sand: #F5F1E9; /* Neutral Background */
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --font-main: 'Open Sans', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+/* --- 2. GLOBAL RESET --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-sand);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* --- 3. NAVIGATION  --- */
+header {
+    background-color: var(--primary-color);
+    padding: 1.2rem 5%;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.logo span { color: var(--accent-color); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+/* --- 4. HOME PAGE HERO --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4) rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1516422217105-070b30436b44?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero h1 { font-size: 4rem; font-family: var(--font-heading); margin: 10px 0; }
+
+/* --- 5. GRID & CARDS (HOME PAGE) --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card { background: var(--white); padding-bottom: 20px; text-align: center; }
+.card img { width: 100%; height: 250px; object-fit: cover; }
+.card h3 { margin: 15px 0 5px; color: var(--primary-color); }
+
+/* --- 6. SPLIT SECTION (ABOUT PAGE) --- */
+.split-section { display: flex; flex-wrap: wrap; align-items: stretch; }
+.split-section.reverse { flex-direction: row-reverse; }
+
+.split-image, .split-text { flex: 1 1 500px; min-height: 400px; }
+.split-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.split-text { 
+    padding: 10% 8%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.dark-bg { background-color: var(--primary-color); }
+.white-text { color: var(--white); }
+
+/* --- 7. CONTACT FORM (CONTACT PAGE) --- */
+.form-hero { padding: 80px 5%; display: flex; justify-content: center; }
+.form-card { background: var(--white); padding: 50px; border-radius: 8px; max-width: 700px; width: 100%; }
+
+.safari-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+.safari-form input, .safari-form select, .safari-form textarea {
+    padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;
+}
+
+.poveda-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poveda-btn:hover { background-color: var(--accent-color); }
+
+/* --- 8. FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 5%;
+}
+
+footer a { color: var(--accent-color); text-decoration: none; }
+
+/* --- 9. MOBILE MENU --- */
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { width: 25px; height: 3px; background-color: var(--white); }
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; } 
+}
+
+/* --- 1. Header Container --- */
+header {
+    background-color: var(--primary-color);
+    padding: 0.8rem 5%; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- 2. Logo Alignment (The Fix) --- */
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
+    object-fit: contain; 
+    background-color: white; 
+    border-radius: 50%; 
+    padding: 2px;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column; 
+    line-height: 1.1;
+}
+
+.logo {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-color);
+    font-weight: 400; 
+}
+
+/* --- 3. Navigation Links --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+
+
